@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "ReviewNamespace.h"
 #include "ReviewHeader.h"
 #include "ReviewFunction.cpp"
@@ -18,7 +19,9 @@ int main(int argc, char** argv) // argc: number of arguments; argv: argument vec
     int num = 10;
     int* age = new int[num]; // declare on the heap and size is determined at runtime
     int swapA = 1, swapB = 2;
+    string welcome = "Hi! ", name = "Charlie";
 
+    cout << welcome+name << endl;
     cout << swapA << ' ' << swapB << endl;
     Swap(swapA, swapB);
     cout << swapA << ' ' << swapB << endl;
