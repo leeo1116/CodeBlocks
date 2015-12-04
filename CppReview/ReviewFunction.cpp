@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #include <iostream>
 using namespace std;
-=======
 
->>>>>>> origin/master
 
 int Factorial(int k)
 {

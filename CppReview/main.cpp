@@ -2,11 +2,7 @@
 #include <string>
 #include "ReviewNamespace.h"
 #include "ReviewHeader.h"
-<<<<<<< HEAD
-// #include "ReviewFunction.cpp"
-=======
 #include "Calculator.h"
->>>>>>> origin/master
 
 using namespace std;
 using namespace review;
@@ -15,7 +11,7 @@ using namespace review;
 
 int main(int argc, char** argv) // argc: number of arguments; argv: argument vector
 {
-    char words[] = "Liang Li";
+    char words[] = "Smile face";
     int index[]  = {1, 2, 3};
     int weight[5] = {0};
     int* date[7];
@@ -28,6 +24,24 @@ int main(int argc, char** argv) // argc: number of arguments; argv: argument vec
     Calculator calc; // Stack-based calculator
     Calculator* myCalc;
     float location[][3] = {{1, 2, 5}, {3, 6, 8}};
+    int* p = &num;
+    int array1[2] = {3, 9};
+    int array2[2][3] = {{2, 3, 2}, {0, 1, 5}};
+
+    cout << "p = " << p << endl;
+    cout << "&p = " << &p << endl;
+    cout << "*p = " << *p << endl;
+
+    cout << "array1 = " << array1 << endl;
+    cout << "&array1 = " << &array1 << endl;
+    cout << "*array1 = " << *array1 << endl;
+    cout << "&array1[0] = " << &array1[0] << endl;
+    cout << "&array1[1] = " << &array1[1] << endl;
+
+    cout << "array2 = " << array2 << endl;
+    cout << "&array2 = " << &array2 << endl;
+    cout << "*array2 = " << *array2 << endl;
+    cout << "**array2 = " << **array2 << endl;
 
     cout << "size of stack-based: " << sizeof(calc)
     << "size of heap-based: " << sizeof(myCalc) << endl;
