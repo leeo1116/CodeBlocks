@@ -32,6 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Calculator.cpp" />
+		<Unit filename="Calculator.h" />
+		<Unit filename="ReviewFunction.cpp" />
+		<Unit filename="ReviewHeader.h" />
+		<Unit filename="ReviewNamespace.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
