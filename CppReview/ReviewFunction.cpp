@@ -1,4 +1,5 @@
-#include "ReviewHeader.h"
+#include <iostream>
+using namespace std;
 
 int Factorial(int k)
 {
