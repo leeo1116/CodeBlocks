@@ -1,7 +1,12 @@
 #include <iostream>
+#include <string>
 #include "ReviewNamespace.h"
 #include "ReviewHeader.h"
+<<<<<<< HEAD
 // #include "ReviewFunction.cpp"
+=======
+#include "Calculator.h"
+>>>>>>> origin/master
 
 using namespace std;
 using namespace review;
@@ -18,7 +23,24 @@ int main(int argc, char** argv) // argc: number of arguments; argv: argument vec
     int num = 10;
     int* age = new int[num]; // declare on the heap and size is determined at runtime
     int swapA = 1, swapB = 2;
+    float sum, result;
+    string welcome = "Hi! ", name = "Charlie";
+    Calculator calc; // Stack-based calculator
+    Calculator* myCalc;
+    float location[][3] = {{1, 2, 5}, {3, 6, 8}};
 
+    cout << "size of stack-based: " << sizeof(calc)
+    << "size of heap-based: " << sizeof(myCalc) << endl;
+    myCalc = &calc; // myCalc = new Calculator;
+    myCalc->SetAllowNegative(false);
+    result = myCalc->divide(3, 2);
+    cout << "3/2=" << result << endl;
+
+    cout << "size of words is " << sizeof(words) << endl;
+    calc.SetAllowNegative(true);
+    sum = calc.add(2, -1);
+    cout << "2+(-1)=" << sum << endl;
+    cout << welcome+name << endl;
     cout << swapA << ' ' << swapB << endl;
     Swap(swapA, swapB);
     cout << swapA << ' ' << swapB << endl;
@@ -33,10 +55,16 @@ int main(int argc, char** argv) // argc: number of arguments; argv: argument vec
         cout << age[i] << endl;
     }
 
-
-
     cout << "Hello world!" << endl;
     PrintName(words); // Function from a namespace
     cout << Factorial(5) << endl; // Function from external file
+
+    switch(num)
+    {
+    case 1:
+        cout << "Liang" << endl;
+    default:
+        break;
+    }
     return 0;
 }
