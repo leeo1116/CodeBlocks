@@ -4,9 +4,8 @@
 #include "ReviewHeader.h"
 #include "Calculator.h"
 
-using namespace std;
-using namespace review;
 
+using namespace review;
 
 
 int main(int argc, char** argv) // argc: number of arguments; argv: argument vector
@@ -27,17 +26,39 @@ int main(int argc, char** argv) // argc: number of arguments; argv: argument vec
     int* p = &num;
     int array1[2] = {3, 9};
     int array2[2][3] = {{2, 3, 2}, {0, 1, 5}};
+    int array3[N][N] = {{2, 3}, {0, 1}};
+    int array4[N][N];
+    int *p1[3]; // Pointer to an array
+    int **p2; // Pointer to a pointer
 
-    cout << "p = " << p << endl;
+    vector< vector<int> > array5(2, vector<int>(2));
+    PrintArray(array5, 2, 2);
+    cout << "*(*(array2+1)+1) = array2[1][1] = " << *(*(array2+1)+1) << " = " << array2[1][1] << endl;
+    cout << "sizeof(array4)/sizeof(array4[0]) = " << sizeof(array4)/sizeof(array4[0]) << endl;
+    A array2Rotated;
+    array2Rotated = RotateArray90(array3);
+    // array4 = array2Rotated; // Cannot convert array pointer to array
+    for(int i = 0; i < N; i++)
+    {
+        cout << endl;
+        for(int j = 0; j < N; j++)
+        {
+            cout << array2Rotated[i][j] << ' ';
+            cout << *(*(array2Rotated+i)+j) << ' ';
+        }
+    }
+    cout << endl << "p = " << p << endl;
     cout << "&p = " << &p << endl;
     cout << "*p = " << *p << endl;
 
+    cout << "sizeof(array1) = " << sizeof(array1) << endl;
     cout << "array1 = " << array1 << endl;
     cout << "&array1 = " << &array1 << endl;
     cout << "*array1 = " << *array1 << endl;
     cout << "&array1[0] = " << &array1[0] << endl;
     cout << "&array1[1] = " << &array1[1] << endl;
 
+    cout << "sizeof(array2) = " << sizeof(array2) << endl;
     cout << "array2 = " << array2 << endl;
     cout << "&array2 = " << &array2 << endl;
     cout << "*array2 = " << *array2 << endl;
