@@ -10,6 +10,11 @@ using namespace review;
 
 int main(int argc, char** argv) // argc: number of arguments; argv: argument vector
 {
+    for(int i = 0; i < argc; i++)
+    {
+        cout << i << "th argument: " << *(argv+i) << ' ';
+    }
+    cout << endl;
     char words[] = "Smile face";
     int index[]  = {1, 2, 3};
     int weight[5] = {0};

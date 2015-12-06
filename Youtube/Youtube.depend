@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1428452241 source:f:\codeblocks\youtube\youtube\main.cpp
+	<iostream>
+	<string>
+	"Print.h"
+	"CoolSaying.h"
+	"SingSong.h"
+
+1428298867 f:\codeblocks\youtube\youtube\print.h
+	<string>
+
+1428298872 source:f:\codeblocks\youtube\youtube\print.cpp
+	<iostream>
+
+1428452126 f:\codeblocks\youtube\youtube\include\coolsaying.h
+	<string>
+
+1428298611 source:f:\codeblocks\youtube\youtube\src\coolsaying.cpp
+	"CoolSaying.h"
+	<iostream>
+	<string>
+
+1428452544 f:\codeblocks\youtube\youtube\include\singsong.h
+	<string>
+	"CoolSaying.h"
+
+1428451592 source:f:\codeblocks\youtube\youtube\src\singsong.cpp
+	<iostream>
+	<string>
+	"SingSong.h"
+	"CoolSaying.h"
+
+1436850562 source:d:\codeblocks\youtube\main.cpp
+	<iostream>
+	<string>
+	"Print.h"
+	"CoolSaying.h"
+	"SingSong.h"
+
+1428295267 d:\codeblocks\youtube\print.h
+	<string>
+
+1428295272 source:d:\codeblocks\youtube\print.cpp
+	<iostream>
+
+1428295011 source:d:\codeblocks\youtube\src\coolsaying.cpp
+	"CoolSaying.h"
+	<iostream>
+	<string>
+
+1428448526 d:\codeblocks\youtube\include\coolsaying.h
+	<string>
+
+1428448976 d:\codeblocks\youtube\include\singsong.h
+	<string>
+	"CoolSaying.h"
+
+1428448858 source:d:\codeblocks\youtube\src\singsong.cpp
+	<iostream>
+	<string>
+	"SingSong.h"
+	"CoolSaying.h"
+
