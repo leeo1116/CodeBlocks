@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 171699361 
 
-1449213627 source:f:\github\codeblocks\cppreview\main.cpp
+1449431921 source:f:\github\codeblocks\cppreview\main.cpp
 	<iostream>
 	<string>
 	"ReviewNamespace.h"
@@ -56,4 +56,10 @@
 1449299793 source:f:\github\codeblocks\cppreview\reviewfunction.cpp
 	<iostream>
 	"ReviewHeader.h"
+
+1449431191 source:f:\github\codeblocks\cppreview\src\calculator.cpp
+	<iostream>
+	"Calculator.h"
+
+1449431341 f:\github\codeblocks\cppreview\include\calculator.h
 

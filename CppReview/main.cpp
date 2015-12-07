@@ -14,21 +14,23 @@ int main(int argc, char** argv) // argc: number of arguments; argv: argument vec
     {
         cout << i << "th argument: " << *(argv+i) << ' ';
     }
+
     cout << endl;
     char words[] = "Smile face";
     int index[]  = {1, 2, 3};
     int weight[5] = {0};
-    int* date[7];
+    int *date[7];
     char gender[3]; // declare on the stack and size is determined at compile time
     int num = 10;
-    int* age = new int[num]; // declare on the heap and size is determined at runtime
+    int *age = new int[num]; // declare on the heap and size is determined at runtime
     int swapA = 1, swapB = 2;
     float sum, result;
+
     string welcome = "Hi! ", name = "Charlie";
     Calculator calc; // Stack-based calculator
-    Calculator* myCalc;
+    Calculator *myCalc;
     float location[][3] = {{1, 2, 5}, {3, 6, 8}};
-    int* p = &num;
+    int *p = &num;
     int array1[2] = {3, 9};
     int array2[2][3] = {{2, 3, 2}, {0, 1, 5}};
     int array3[N][N] = {{2, 3}, {0, 1}};
@@ -101,10 +103,11 @@ int main(int argc, char** argv) // argc: number of arguments; argv: argument vec
 
     switch(num)
     {
-    case 1:
-        cout << "Liang" << endl;
-    default:
-        break;
+        case 1:
+            cout << "Liang" << endl;
+        default:
+            break;
     }
     return 0;
+
 }
