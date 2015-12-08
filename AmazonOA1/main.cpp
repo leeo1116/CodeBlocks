@@ -11,7 +11,7 @@ int main(int argc, char** argv)
     int unsortedNums3[] = {3, 2, 4, 9, 1, 5, 8, 6, 7};
     int unsortedNums4[] = {3, 2, 4, 9, 1, 5, 8, 6, 7};
     int inputList[] = {4, 2, 12, 11, -5};
-    int matrix0[row][col] = {{1, 5, 9}, {3, 8, 12}, {6, 20, 32}};
+    int matrix0[row][col] = {{6, 5, 9}, {3, 8, 12}, {6, 20, 32}};
     vector< vector<int> > matrix1(row, vector<int> (col, 0));
 
     int *sortedNums1, *sortedNums2, *sortedNums3, *sortedNums4, *winList;
@@ -45,5 +45,9 @@ int main(int argc, char** argv)
     bool doExist = Search2DimMatrix(matrix1, 1);
     string existInfo = doExist ? "Exist" : "Not Exist";
     cout << existInfo << endl;
+
+    int globalMax = MaxMinPath(matrix1, row, col);
+    cout << "globalMax = " << globalMax << endl;
+
     return 0;
 }

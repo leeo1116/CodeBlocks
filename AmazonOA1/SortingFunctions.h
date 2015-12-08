@@ -10,6 +10,6 @@ int *InsertionSort(int nums[], int numsLen);
 int *BubbleSort(int nums[], int numsLen);
 int *QuickSort(int nums[], int left, int right);
 
-int *WindowMin(int nums[], int numsLen, int winLen);
+
 
 #endif // SORTINGFUNCTIONS_H_INCLUDED
