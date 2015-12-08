@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="OA1.cpp" />
+		<Unit filename="OA1.h" />
 		<Unit filename="SortingFunctions.cpp" />
 		<Unit filename="SortingFunctions.h" />
 		<Unit filename="main.cpp" />

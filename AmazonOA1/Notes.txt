@@ -1,0 +1,10 @@
+1. Count occurrence of specified element
+Problem: missing i++ in loop
+
+2. Print pattern: input 3 ==> 11, 1111, 111111
+Problem: missing curly bracket in for loop
+
+3. Reverse array: reverse all the elements in an array
+Problem: change arr[len-1] to arr[len-i-1]
+
+4.
