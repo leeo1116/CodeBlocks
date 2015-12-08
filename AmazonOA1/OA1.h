@@ -9,6 +9,9 @@ using namespace std;
 #define col 3
 
 
-bool Search2DimMatrix(vector< vector<int> > &matrix, int target);
+bool Search2DimMatrix(vector< vector<int> > matrix, int target);
+int *WindowMin(int nums[], int numsLen, int winLen);
+int MaxMinPath(vector< vector<int> > matrix, int r, int c);
+
 
 #endif // OA1_H_INCLUDED

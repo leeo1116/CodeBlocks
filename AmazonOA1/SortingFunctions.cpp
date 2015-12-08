@@ -119,31 +119,4 @@ int *QuickSort(int nums[], int left, int right)
 }
 
 
-/** Find minimum value inside window
- *
- * Parameter: nums[] - input array
- * Parameter: numsLen - input array length
- * Parameter: winLen - window size
- *
- */
-int *WindowMin(int nums[], int numsLen, int winLen)
-{
-    int rNumLen = numsLen-winLen+1;
-    int *rNums = new int[rNumLen];
 
-    // int rNums[rNumLen];
-    // After returning, the rNums will be out of its storage scope;
-    // only first memory address will be maintained, cause problems later
-
-    for(int i = 0; i <= numsLen-winLen; i++)
-    {
-        int tempMin = nums[i];
-        for(int j = 0; j < winLen; j++)
-        {
-            if(nums[i+j] < tempMin)
-                tempMin = nums[i+j];
-        }
-        rNums[i] = tempMin;
-    }
-    return rNums;
-}

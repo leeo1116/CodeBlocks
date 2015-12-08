@@ -1,3 +1,5 @@
+DEBUG:
+=================================================================================================
 1. Count occurrence of specified element
 Problem: missing i++ in loop
 
@@ -5,6 +7,46 @@ Problem: missing i++ in loop
 Problem: missing curly bracket in for loop
 
 3. Reverse array: reverse all the elements in an array
-Problem: change arr[len-1] to arr[len-i-1]
+Problem: change arr[len-1] to arr[len-i-1], delete len += 1
 
-4.
+4. Digit count: input 2341 ==> return 2341%4 (number of digits)
+Problem: after while loop, num becomes 0, num%digit can get result, should use a new variable
+
+5. Odd even number: if m%2 == 0, print num even numbers from 0, else print num odd numbers from 1
+Problem: no curly bracket in for loop
+
+6. Bubble sort: for(i = 0; i < len-1; i++) for(j = 0; j < len-i-1; j++)
+Problem: Change < or >
+
+7. Selection sort:
+Problem: Change < or >, arr[index_of_min] > arr[x] change to arr[y]
+
+8. Manchester code:
+Problem: change ==  to result = (A != A[i-1])
+
+9. Check grade:
+Problem: change || to &&
+
+
+
+
+LOGIC
+==================================================================================================
+1. {2, 8, 5, 6, 8, ?, 11}
+Answer: 4
+
+2. ASS ERT IVE NES S --> SEN SSA EVI S TRE (Aessertiveness)
+   MUL TIN ATI ONA L --> ?
+Answer: ANO LUM ITA L NIT (Multinational)
+
+3.
+BHE : FLI :: JPM : ?
+985 874 :: 763  ?
+HIK  DGJ LPT SUW  :  HIK
+N3K  T4P  W5S Q2O  :  W5S
+FJN   HLO   CGK KOS  :  HLO
+EXAM: FYBN :: TEST : ?
+ASSERTIVENESS : SENSSAEVISTRE ::  MULTINATIONAL: ?
+17,38,66,101, ?
+0, 1, 1, 2, 4, 8, ?
+

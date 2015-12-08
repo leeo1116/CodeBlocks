@@ -1,11 +1,13 @@
 # depslib dependency file v1.0
-1449474165 source:f:\github\codeblocks\amazonoa1\main.cpp
+1449552594 source:f:\github\codeblocks\amazonoa1\main.cpp
 	<iostream>
+	<string>
 	"SortingFunctions.h"
+	"OA1.h"
 
-1449470949 f:\github\codeblocks\amazonoa1\sortingfunctions.h
+1449555798 f:\github\codeblocks\amazonoa1\sortingfunctions.h
 
-1449474711 source:f:\github\codeblocks\amazonoa1\sortingfunctions.cpp
+1449555800 source:f:\github\codeblocks\amazonoa1\sortingfunctions.cpp
 	<iostream>
 	"SortingFunctions.h"
 
@@ -25,5 +27,12 @@
 	<vector>
 
 1449520272 source:c:\users\liangl2\documents\github\codeblocks\amazonoa1\oa1.cpp
+	"OA1.h"
+
+1449556621 f:\github\codeblocks\amazonoa1\oa1.h
+	<vector>
+
+1449557778 source:f:\github\codeblocks\amazonoa1\oa1.cpp
+	<limits.h>
 	"OA1.h"
 
