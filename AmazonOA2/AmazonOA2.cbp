@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -35,7 +37,9 @@
 		<Unit filename="Notes.txt" />
 		<Unit filename="OA2.cpp" />
 		<Unit filename="OA2.h" />
+		<Unit filename="include/TreeNode.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/TreeNode.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
