@@ -5,6 +5,7 @@
 #include<vector>
 #include<iostream>
 #include<cstddef>
+#include "TreeNode.h"
 
 
 using namespace std;
@@ -14,6 +15,9 @@ void PrintMatrix(vector< vector<int> > matrix);
 vector< vector<int> > RotateMatrix270(vector< vector<int> > matrix);
 vector< vector<int> > RotateMatrix90(vector< vector<int> > matrix);
 int MinPathSum(vector< vector<int> > grid);
-int MinTreePathSum()
+int GreatestCommonDividerNaive(int a, int b);
+int GreatestCOmmonDividerEuclid(int a, int b);
+int MinTreePathSum(TreeNode *head);
+
 
 #endif // OA2_H_INCLUDED

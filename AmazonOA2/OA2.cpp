@@ -3,9 +3,9 @@
 
 void InitializeMatrix(vector< vector<int> > &matrix, int nums[][4])
 {
-    for(int i = 0; i < matrix.size(); i++)
+    for(unsigned i = 0; i < matrix.size(); i++)
     {
-        for(int j = 0; j < matrix[0].size(); j++)
+        for(unsigned j = 0; j < matrix[0].size(); j++)
         {
             matrix[i][j] = nums[i][j];
         }
@@ -101,4 +101,31 @@ int MinPathSum(vector< vector<int> > grid)
 }
 
 
+int GreatestCommonDividerNaive(int a, int b)
+{
+    int gcd = 1;
+    for(int i = 1; i <= a && i <= b; i++)
+    {
+        if(a%i == 0 && b%i == 0)
+            gcd = i;
+    }
+    return gcd;
+}
 
+
+int GreatestCOmmonDividerEuclid(int a, int b)
+{
+    return b == 0 ? a : GreatestCOmmonDividerEuclid(b, a%b);
+}
+
+
+int MinTreePathSum(TreeNode *head)
+{
+    if(!head)
+        return 0;
+    else
+    {
+        return head->val+min(MinTreePathSum(head->left), MinTreePathSum(head->right));
+    }
+
+}

@@ -17,4 +17,4 @@ email is not initialized; return null; input is float, output is int; AssertSame
  2.9 Reverse Half Linked List
  2.10 Insert into a Cycle List
  2.11 Minimum Tree Path Sum *
- 2.12 Greatest Common Divider
+ 2.12 Greatest Common Divider *
