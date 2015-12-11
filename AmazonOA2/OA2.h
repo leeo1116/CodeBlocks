@@ -11,9 +11,8 @@ using namespace std;
 
 void InitializeMatrix(vector< vector<int> > &matrix, int nums[][4]);
 void PrintMatrix(vector< vector<int> > matrix);
-vector< vector<int> > RotateMatrix270(vector< vector<int> > matrix);
-vector< vector<int> > RotateMatrix90(vector< vector<int> > matrix);
+vector< vector<int> > RotateMatrix(vector< vector<int> > matrix, bool flag);
 int MinPathSum(vector< vector<int> > grid);
-int MinTreePathSum()
+int MinTreePathSum();
 
 #endif // OA2_H_INCLUDED

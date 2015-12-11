@@ -56,7 +56,7 @@ vector< vector<int> > RotateMatrix270(vector< vector<int> > matrix)
 }
 
 
-vector< vector<int> > RotateMatrix90(vector< vector<int> > matrix)
+vector< vector<int> > RotateMatrix(vector< vector<int> > matrix, bool flag)
 {
     int m = matrix.size();
     if(!m)
@@ -68,7 +68,10 @@ vector< vector<int> > RotateMatrix90(vector< vector<int> > matrix)
     {
         for(int j = 0; j < n; j++)
         {
-            rotatedMatrix[n-j-1][i] = matrix[i][j];
+            if(flag)
+                rotatedMatrix[n-j-1][i] = matrix[i][j];
+            else
+                rotatedMatrix[j][m-i-1] = matrix[i][j];
         }
     }
     return rotatedMatrix;

@@ -2,7 +2,7 @@
 #include "OA2.h"
 
 
-int main()
+int main(int argc, char **argv)
 {
     cout << "Hello world!" << endl;
     int nums[][4] = {{1, 2, 3, 4}, {5, 6, 8, 9}, {0, 1, 4, 2}};
@@ -12,8 +12,8 @@ int main()
 
     InitializeMatrix(matrix, nums);
     PrintMatrix(matrix);
-    rotatedMatrix270 = RotateMatrix270(matrix);
-    rotatedMatrix90 = RotateMatrix90(matrix);
+    rotatedMatrix270 = RotateMatrix(matrix, 0);
+    rotatedMatrix90 = RotateMatrix(matrix, 1);
     PrintMatrix(rotatedMatrix270);
     PrintMatrix(rotatedMatrix90);
     cout << MinPathSum(matrix) << endl;
