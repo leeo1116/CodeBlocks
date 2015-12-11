@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1449799009 source:c:\users\liangl2\documents\github\codeblocks\amazonoa2\main.cpp
+	<iostream>
+	"OA2.h"
+
+1449798944 source:c:\users\liangl2\documents\github\codeblocks\amazonoa2\oa2.cpp
+	"OA2.h"
+
+1449798915 c:\users\liangl2\documents\github\codeblocks\amazonoa2\oa2.h
+	<vector>
+	<iostream>
+	<cstddef>
+
