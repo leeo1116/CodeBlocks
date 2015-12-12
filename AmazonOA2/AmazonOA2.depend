@@ -1,15 +1,19 @@
 # depslib dependency file v1.0
-1449865586 source:c:\users\liangl2\documents\github\codeblocks\amazonoa2\main.cpp
+1449881354 source:c:\users\liangl2\documents\github\codeblocks\amazonoa2\main.cpp
 	<iostream>
 	"OA2.h"
 
-1449865522 source:c:\users\liangl2\documents\github\codeblocks\amazonoa2\oa2.cpp
+1449878519 source:c:\users\liangl2\documents\github\codeblocks\amazonoa2\oa2.cpp
 	"OA2.h"
 
-1449865602 c:\users\liangl2\documents\github\codeblocks\amazonoa2\oa2.h
+1449883118 c:\users\liangl2\documents\github\codeblocks\amazonoa2\oa2.h
 	<vector>
 	<iostream>
 	<cstddef>
+	<deque>
+	<list>
+	"TreeNode.h"
+	"ListNode.h"
 
 1449822621 source:f:\github\codeblocks\amazonoa2\main.cpp
 	<iostream>
@@ -30,4 +34,18 @@
 
 1449822055 source:f:\github\codeblocks\amazonoa2\src\treenode.cpp
 	"TreeNode.h"
+
+1449875038 c:\users\liangl2\documents\github\codeblocks\amazonoa2\include\treenode.h
+	<iostream>
+	<stddef.h>
+	<string>
+
+1449865712 source:c:\users\liangl2\documents\github\codeblocks\amazonoa2\src\treenode.cpp
+	"TreeNode.h"
+
+1449873991 source:c:\users\liangl2\documents\github\codeblocks\amazonoa2\src\listnode.cpp
+	"ListNode.h"
+
+1449873961 c:\users\liangl2\documents\github\codeblocks\amazonoa2\include\listnode.h
+	<stddef.h>
 

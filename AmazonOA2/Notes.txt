@@ -18,3 +18,55 @@ email is not initialized; return null; input is float, output is int; AssertSame
  2.10 Insert into a Cycle List
  2.11 Minimum Tree Path Sum *
  2.12 Greatest Common Divider *
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 1.Round Robin
+一个处理器要处理一堆request，一次只能处理一条，每次执行一个任务最多执行时间q，接着执行等待着的下一个任务。若前一个任务没执行完则放到队尾，等待下一次执行
+假设只要有任务开始以后cpu是不会空闲的，也就是说cpu开始后如果空闲了就说明没有任务了，另外Robin Round最后返回值是float
+    public static float waitingTimeRobin(int[] arrival,int[] run, int q)
+
+2.Rotate Matrix （
+    把一个m*n的矩阵旋转90度，给一个flag规定是向左转还是向右转
+
+3.Binary search tree minimum sum from root to leaf
+    跟BST没啥关系，不要看到BST就以为是最左边的路径之和（左边路径可以很长，右边路径可以很短），用递归做很简单
+
+4.insert into cycle linked list
+    插入一个新的节点到一个sorted cycle linkedlist，返回新的节点。给的list节点不一定是最小节点
+
+5.Greatest Common Divisor
+    就是给一个数组找这些数的最大公约数
+
+6.Shorted job first
+    一个处理器要处理一堆request，一次只能处理一条，如果它有几个积压着的requests，它会先执行持续时间短的那个；对于持续时间相等的requests，先执行最早到达处理器的request。问平均每个request要等多久才能被处理。input：requestTimes[]，每个request到达处理器的时间; durations[] 每个request要处理的持续时间。 两个数组是一一对应的，并已按requestTimes[] 从小到大排序过
+    public double CalWaitingTime(int requestTimes[], int[] durations[]){}
+    用priorityqueue做，地里有一个两层循环的答案，没仔细看，做完round robin以后发现思路很相似。注意用priorityqueue写comparator的时候，要先判断两者的execute time,如果execute time相同，则返回arrival time之差，即先按执行时间排序，若执行时间相同则按到达的时间排。
+
+7.Valid Parenthesis
+    给你一个str,里面只有 '('和‘)’,让你数valid pairs一共有多少,如果不是valid就返回-1. (判断是不是valid的parenthesis string，不是的话返回-1，是的话返回valid pair个数，即String.length() / 2 )
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�.
+8.LRU Cache count miss
+    实现以下LRU Cache再判断啥时候miss就好了，返回miss数。建议看看用LinkedHashMap实现lru cache, 代码很简洁。
+
+9.Day chang(cell growth)
+    int[] dayChange(int[] cells, int days), cells 数组，有8个元素，每天的变化情况是 当前位置 cell == (cell[i - 1] == cell[i + 1]) ? 0 : 1, 左右相等，当前位置为0， 不等为1， 默认 cells[0]左边 和 cells[cells.length - 1]右边的位置元素都是0， 求days天后的变化.
+
+10.Maze
+    给个array,其中只有一格是9，其他格子是0或1，0表示此路不通，1表示可以走，判断从（0,0) 点开始上下左右移动能否找到这个是9的格子
+
+11.subtree
+. more info on 1point3acres.com
+12.sametree
+    判断两棵树是否相同（结构和值）
+

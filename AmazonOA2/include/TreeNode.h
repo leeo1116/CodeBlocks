@@ -4,6 +4,7 @@
 
 #include<iostream>
 #include<stddef.h>
+#include<string>
 
 
 using namespace std;

@@ -121,14 +121,86 @@ int GreatestCOmmonDividerEuclid(int a, int b)
     return b == 0 ? a : GreatestCOmmonDividerEuclid(b, a%b);
 }
 
-
+/** Find min path sum from root to leaf(!), path = {head} + left path, if left sum is smaller
+ *
+ * head: root node pointer
+ * path: path vector
+ * return path sum
+ *
+ */
 int MinTreePathSum(TreeNode *head)
 {
-    if(!head)
+    if(!head)  // head is NULL
         return 0;
+    else if(!(head->left) && head->right)  // only head->left is NULL
+        return head->val+MinTreePathSum(head->right);
+    else if(!(head->right) && head->left)  // only head->right is NULL
+        return head->val+MinTreePathSum(head->left);
+    else
+        return head->val+min(MinTreePathSum(head->left), MinTreePathSum(head->right));  // none of left and right are NULL
+}
+
+
+int MinTreePathSumStackoverflow(TreeNode *head, list<TreeNode *> &path)
+{
+    if(!head)  // head is NULL
+        return 0;
+    else if(!(head->left) && head->right)  // only head->left is NULL
+    {
+        list<TreeNode *> pathTemp;
+        int val = head->val+MinTreePathSumStackoverflow(head->right, pathTemp);
+        pathTemp.push_front(head);
+        path.merge(pathTemp);
+        return val;
+    }
+    else if(!(head->right) && head->left)  // only head->right is NULL
+    {
+        list<TreeNode *> pathTemp;
+        int val = head->val+MinTreePathSumStackoverflow(head->left, pathTemp);
+        pathTemp.push_front(head);
+        path.merge(pathTemp);
+        return val;
+    }
     else
     {
-        return head->val+min(MinTreePathSum(head->left), MinTreePathSum(head->right));
+        int vl, vr, val;
+        list<TreeNode *> pathTempL, pathTempR;
+        vl = MinTreePathSumStackoverflow(head->left, pathTempL);
+        vr = MinTreePathSumStackoverflow(head->right, pathTempR);
+        if(vl < vr)
+        {
+            val = vl;
+            pathTempL.push_front(head);
+            path.merge(pathTempL);
+        }
+        else
+        {
+            val = vr;
+            pathTempR.push_front(head);
+            path.merge(pathTempR);
+        }
+        return head->val + val;
+    }
+}
+
+
+ListNode *ReverseHalfLinkedList(ListNode *head)
+{
+    ListNode *p = head, *q = head;
+    // Get middle node as new head
+    while(p && p->next)
+    {
+        p = p->next->next;
+        q = q->next;
+    }
+    ListNode *r = q->next;
+    ListNode *s;
+    while()
+    {
+        s = r.next;
+        r.next = q;
+
     }
 
+    return NULL;
 }

@@ -37,8 +37,10 @@
 		<Unit filename="Notes.txt" />
 		<Unit filename="OA2.cpp" />
 		<Unit filename="OA2.h" />
+		<Unit filename="include/ListNode.h" />
 		<Unit filename="include/TreeNode.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ListNode.cpp" />
 		<Unit filename="src/TreeNode.cpp" />
 		<Extensions>
 			<code_completion />
