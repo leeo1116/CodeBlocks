@@ -191,6 +191,8 @@ ListNode *ReverseHalfLinkedList(ListNode *head)
     while(p && p->next)
     {
         p = p->next->next;
+        if(!p->next || !p->next->next)
+            ListNode *preTail = q;
         q = q->next;
     }
     ListNode *r = q->next;
