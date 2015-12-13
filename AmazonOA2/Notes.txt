@@ -9,15 +9,17 @@ email is not initialized; return null; input is float, output is int; AssertSame
  2.1 Round Robin
  2.2 Rotate Matrix *
  2.3 Minimum Path Sum *
- 2.4 Insert Linked List
- 2.5 LRU Cache Miss
- 2.6 Subtree
- 2.7 Maze
+ 2.4 Insert into Cycle Linked List *
+ 2.5 LRU Cache Miss Count *
+ 2.6 Sub-tree *
+ 2.7 Maze *
  2.8 Shortest Job First
- 2.9 Reverse Half Linked List
- 2.10 Insert into a Cycle List
+ 2.9 Reverse Half Linked List *
+ 2.10 Valid Parenthesis *
  2.11 Minimum Tree Path Sum *
  2.12 Greatest Common Divider *
+ 2.13 Same Tree *
+ 2.14 Day Change *
 
 
 
@@ -26,6 +28,11 @@ email is not initialized; return null; input is float, output is int; AssertSame
 
 
 
+
+
+
+Work simulations 还是一堆在deadline和meet client's requirements中选择. 我几乎没有5的选择,大多在2-4.看error Log 题目,一个是有些book recommendation是invalid,一个是有些用户的语言变成德语.
+改错题5个junit test. 出现的问题有email variable没有初始化;在user.getPaymentMethod().getDefault()中,getPaymentMethod返回的是个Null ; setPrice()传进去的参数是double,但是return是int,所以assertSame为false.
 
 
 

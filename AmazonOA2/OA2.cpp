@@ -186,23 +186,260 @@ int MinTreePathSumStackoverflow(TreeNode *head, list<TreeNode *> &path)
 
 ListNode *ReverseHalfLinkedList(ListNode *head)
 {
-    ListNode *p = head, *q = head;
+    if(!head || !head->next || !head->next->next)
+        return head;
+    ListNode *p = head, *q = head, *preTail;
     // Get middle node as new head
     while(p && p->next)
     {
         p = p->next->next;
-        if(!p->next || !p->next->next)
-            ListNode *preTail = q;
+        if(p && !p->next)
+            preTail = q;
         q = q->next;
+        if(p && (p->next) && !p->next->next)
+            preTail = q;
     }
-    ListNode *r = q->next;
-    ListNode *s;
-    while()
+
+    ListNode *r = NULL;
+    ListNode *s = NULL;
+    while(q)
     {
-        s = r.next;
-        r.next = q;
+        s = q->next;
+        q->next = r;
+        r = q;
+        q = s;
+    }
+    preTail->next = r;
+    return head;
+}
+
+
+ListNode *InsertCyclicLinkedList(ListNode *start, int x)
+{
+    ListNode *pNewNode = new ListNode(x);
+    // 1. List is Null: new ListNode(x), points to itself
+    if(!start)
+    {
+        pNewNode->next = pNewNode;
+        return pNewNode;
+    }
+    // 2. List is not Null: Find its minimum node
+    ListNode *pCurrent = start, *pNext = start->next;
+    while(pNext != start && pCurrent->val <= pNext->val)
+    {
+        pCurrent = pCurrent->next;
+        pNext = pNext->next;
+    }
+    // 3. Find the correct location to insert x, if x < 1st node
+    ListNode *pMinNode = pNext;
+    pCurrent = pMinNode;
+    pNext = pCurrent->next;
+    while(!(pCurrent->val <= x && x <= pNext->val) && pNext != pMinNode)
+    {
+        pCurrent = pCurrent->next;
+        pNext = pNext->next;
+    }
+    pCurrent->next = pNewNode;
+    pNewNode->next = pNext;
+    return pNewNode;
+}
+
+
+bool IsSameTree(TreeNode *h1, TreeNode *h2)
+{
+    if(!h1 || !h2)
+        return h1 == h2;
+    else
+        return (h1->val == h2->val) && IsSameTree(h1->left, h2->left) && IsSameTree(h1->right, h2->right);
+}
+
+
+bool IsSubTree(TreeNode *r1, TreeNode *r2)
+{
+    if(IsSameTree(r1, r2))
+        return true;
+    else
+    {
+        return ((r1->left) && IsSubTree(r1->left, r2)) || ((r1->right) && IsSubTree(r1->right, r2));
+    }
+}
+
+
+int IsValidParenthesis(string p)
+{
+    stack<char> s;
+    for(unsigned i = 0; i < p.size(); i++)
+    {
+        if(p[i] == '(')
+            s.push(p[i]);
+        else if(p[i] == ')')
+        {
+            if(s.top() == '(')
+                s.pop();
+            else
+                s.push(p[i]);
+        }
+    }
+    if(!s.size())
+        return p.size();
+    else
+        return -1;
+
+}
+
+
+bool SearchMazeDFS(vector< vector<int> > m, unsigned i, unsigned j)
+{
+    if(m[i][j] == 0 || i < 0 || i >= m.size() || j < 0 || j >= m[0].size())
+        return false;
+    if(m[i][j] == 9)
+        return true;
+    if(m[i][j] == 1)
+    {
+        m[i][j] = 0;
+        return SearchMazeDFS(m, i+1, j) || SearchMazeDFS(m, i, j+1) || SearchMazeDFS(m, i, j-1) || SearchMazeDFS(m, i, j+1);
+    }
+    return false;
+}
+
+
+int Maze(vector< vector<int> > m)
+{
+    if(m.size() == 0)
+        return 0;
+    else
+        return SearchMazeDFS(m, 0, 0) ? 1 : 0;
+
+}
+
+
+vector<int> DayChange(vector<int> cells, int days)
+{
+    if(cells.size() == 0)
+        return cells;
+    vector<int> newCells = cells;
+    for(int i = 0; i < days; i++)
+    {
+        for(unsigned j = 0; j < cells.size(); j++)
+        {
+            if(j == 0)
+                newCells[j] = 0 ^ cells[j+1];
+            else if(j == cells.size()-1)
+                newCells[j] = cells[j-1] ^ 0;
+            else
+                newCells[j] = cells[j-1] ^ cells[j+1];
+        }
+        cells = newCells;
+    }
+    return newCells;
+}
+
+
+int LRU_Cache(vector<int> data, unsigned capacity)
+{
+    int missCount = 0;
+    list<int> LRU(0, 0);
+    for(unsigned i = 0; i < data.size(); i++)
+    {
+        if(find(LRU.begin(), LRU.end(), data[i]) != LRU.end())
+        {
+            LRU.remove(data[i]);
+            LRU.push_back(data[i]);
+        }
+        else
+        {
+            missCount += 1;
+            if(LRU.size() == capacity)
+            {
+                LRU.pop_front();
+            }
+            LRU.push_back(data[i]);
+        }
+    }
+    return missCount;
+}
+
+
+void Swap(int &a, int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+
+float ShortestJobFirst(vector<int> arrivalTime, vector<int> exeTime)
+{
+    // Sort executionTime in ascending order, then apply FCFS scheduling
+    int n = exeTime.size();
+    if(!n)
+        return 0;
+    int startTime = arrivalTime[0], totalExeTime = 0, totalWaitTime = 0, k, temp1, temp2;
+    for(int i = 0; i < n-1; i++)
+    {
+        k = i;
+        for(int j = i+1; j < n; j++)
+        {
+            if(exeTime[j] < exeTime[k])
+                k = j;
+        }
+
+        temp1 = exeTime[i];
+        exeTime[i] = exeTime[k];
+        exeTime[k] = temp1;
+
+        temp2 = arrivalTime[i];
+        arrivalTime[i] = arrivalTime[k];
+        arrivalTime[k] = temp2;
 
     }
 
-    return NULL;
+    for(int i = 0; i < n; i++)
+    {
+        if(totalExeTime <= arrivalTime[i])
+            totalWaitTime += 0;
+        else
+            totalWaitTime += startTime+totalExeTime-arrivalTime[i];
+        totalExeTime += exeTime[i];
+    }
+    return float(totalWaitTime)/float(n);
+
+}
+
+int VectorSum(vector<int> exeTime)
+{
+    int totalRemainExeTime = 0;
+    for(unsigned i = 0; i < exeTime.size(); i++)
+    {
+        totalRemainExeTime += exeTime[i];
+    }
+    return totalRemainExeTime;
+}
+
+
+float RoundRobin(vector<int> arrivalTime, vector<int> exeTime, int q)
+{
+    int totalWaitTime = 0, totalExeTime = 0, startTime = arrivalTime[0], totalRemainExeTime = VectorSum(exeTime);
+    while(totalRemainExeTime)
+    {
+        for(unsigned i = 0; i < arrivalTime.size(); i++)
+        {
+            if(exeTime[i] >= q)
+            {
+                totalWaitTime += startTime+totalExeTime-arrivalTime[i];
+                totalExeTime += q;
+                arrivalTime[i] = startTime+totalExeTime;
+                exeTime[i] -= q;
+            }
+            else if(exeTime[i] > 0)
+            {
+                totalWaitTime += startTime+totalExeTime-arrivalTime[i];
+                totalExeTime += exeTime[i];
+                arrivalTime[i] = startTime+totalExeTime;
+                exeTime[i] = 0;
+            }
+        }
+        totalRemainExeTime = VectorSum(exeTime);
+    }
+    return float(totalWaitTime)/float(arrivalTime.size());
 }

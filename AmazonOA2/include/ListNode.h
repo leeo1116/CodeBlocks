@@ -7,15 +7,15 @@
 
 class ListNode
 {
-    public:
-        int val;
-        ListNode *next;
+public:
+    int val;
+    ListNode *next;
 
-        ListNode(int x);
-        virtual ~ListNode();
+    ListNode(int x);
+    virtual ~ListNode();
 
-    protected:
-    private:
+protected:
+private:
 };
 
 #endif // LISTNODE_H
