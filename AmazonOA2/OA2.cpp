@@ -141,49 +141,6 @@ int MinTreePathSum(TreeNode *head)
 }
 
 
-int MinTreePathSumStackoverflow(TreeNode *head, list<TreeNode *> &path)
-{
-    if(!head)  // head is NULL
-        return 0;
-    else if(!(head->left) && head->right)  // only head->left is NULL
-    {
-        list<TreeNode *> pathTemp;
-        int val = head->val+MinTreePathSumStackoverflow(head->right, pathTemp);
-        pathTemp.push_front(head);
-        path.merge(pathTemp);
-        return val;
-    }
-    else if(!(head->right) && head->left)  // only head->right is NULL
-    {
-        list<TreeNode *> pathTemp;
-        int val = head->val+MinTreePathSumStackoverflow(head->left, pathTemp);
-        pathTemp.push_front(head);
-        path.merge(pathTemp);
-        return val;
-    }
-    else
-    {
-        int vl, vr, val;
-        list<TreeNode *> pathTempL, pathTempR;
-        vl = MinTreePathSumStackoverflow(head->left, pathTempL);
-        vr = MinTreePathSumStackoverflow(head->right, pathTempR);
-        if(vl < vr)
-        {
-            val = vl;
-            pathTempL.push_front(head);
-            path.merge(pathTempL);
-        }
-        else
-        {
-            val = vr;
-            pathTempR.push_front(head);
-            path.merge(pathTempR);
-        }
-        return head->val + val;
-    }
-}
-
-
 ListNode *ReverseHalfLinkedList(ListNode *head)
 {
     if(!head || !head->next || !head->next->next)
@@ -339,9 +296,17 @@ int LRU_Cache(vector<int> data, unsigned capacity)
 {
     int missCount = 0;
     list<int> LRU(0, 0);
+
     for(unsigned i = 0; i < data.size(); i++)
     {
-        if(find(LRU.begin(), LRU.end(), data[i]) != LRU.end())
+        bool found = false;
+        for(list<int>::iterator it = LRU.begin(); it != LRU.end(); it++)
+        {
+            if(*it == data[i])
+                found = true;
+        }
+        if(found)
+        //if(find(LRU.begin(), LRU.end(), data[i]) != LRU.end())
         {
             LRU.remove(data[i]);
             LRU.push_back(data[i]);
@@ -405,6 +370,7 @@ float ShortestJobFirst(vector<int> arrivalTime, vector<int> exeTime)
     return float(totalWaitTime)/float(n);
 
 }
+
 
 int VectorSum(vector<int> exeTime)
 {

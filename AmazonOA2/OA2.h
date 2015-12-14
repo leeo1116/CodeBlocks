@@ -29,7 +29,6 @@ int MinTreePathSum();
 int GreatestCommonDividerNaive(int a, int b);
 int GreatestCOmmonDividerEuclid(int a, int b);
 int MinTreePathSum(TreeNode *head);
-int MinTreePathSumStackoverflow(TreeNode *head, list<TreeNode *> &path);
 
 ListNode *ReverseHalfLinkedList(ListNode *head);
 ListNode *InsertCyclicLinkedList(ListNode *start, int x);

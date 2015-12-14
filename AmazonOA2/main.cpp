@@ -10,7 +10,7 @@ int main(int argc, char **argv)
     int cellsArray[] = {0, 1, 1, 1};
 
 
-    int dataArray[] = {1, 2, 3, 4, 5, 4, 1};
+    int dataArray[] = {1, 1, 2, 1, 2, 4, 1};
     int exeTimeArray[] = {5, 3, 8, 6};
     int arrivalTimeArray[] = {0, 1, 2, 3};
     vector< vector<int> > matrix(3, vector<int> (4, 1));
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
         cout << "Is sub tree!" << endl;
     else
         cout << "Not sub tree" << endl;
-    MinTreePathSumStackoverflow(head, path);
+
 
     cout << MinTreePathSum(head) << endl;
 
@@ -119,7 +119,7 @@ int main(int argc, char **argv)
         data[i] = dataArray[i];
     }
     cout << endl;
-    cout << LRU_Cache(data, 4) << endl;
+    cout << "Total miss = " << LRU_Cache(data, 4) << endl;
 
 
     for(unsigned i = 0; i < sizeof(arrivalTimeArray)/sizeof(arrivalTimeArray[0]); i++)
