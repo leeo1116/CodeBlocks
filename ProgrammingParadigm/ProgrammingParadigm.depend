@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1451123230 source:f:\github\codeblocks\programmingparadigm\main.cpp
+	<iostream>
+	<cstddef>
+	<stdlib.h>
+

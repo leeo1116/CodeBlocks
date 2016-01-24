@@ -62,6 +62,7 @@ vector< vector<int> > RotateMatrix(vector< vector<int> > matrix, bool flag)
     if(!m)
         return matrix;
     int n = matrix[0].size();
+
     vector< vector<int> > rotatedMatrix(n, vector<int> (m, 0));
 
     for(int i = 0; i < m; i++)

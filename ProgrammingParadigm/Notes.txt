@@ -1,0 +1,35 @@
+1. Dynamically create matrix using new or malloc
+
+    int row = 3, col = 2;
+    int **pNewMatrix0 = new int *[row];
+    int **pNewMatrix1 = (int **)malloc(row*sizeof(int));
+
+    // Initialization for matrix
+    for(int i = 0; i < row; i++)
+    {
+        pNewMatrix0[i] = new int [col];
+        pNewMatrix1[i] = (int *)malloc(col*sizeof(int));
+        for(int j = 0; j < col; j++)
+        {
+            pNewMatrix0[i][j] = i+j;
+            pNewMatrix1[i][j] = i+j;
+        }
+    }
+
+
+2. Type conversion between int and float, float and short
+
+    int i = 37;
+    float f0 = *(float *)&i;
+
+    float f1 = 7.0;
+    short s = *(short *)&f1;  // s should be non-zero for big-endian machine
+
+
+3. Array
+
+    a = &a[0]
+    a+k = &a[k]
+
+    *a = a[0]
+    *(a+k) = a[k]
