@@ -3,30 +3,25 @@
 
 Graph::Graph(int v)
 {
-    this->vNum = v;             // alternative: vNum = v;
-    adj = new list<int>[v];     // list array with v elements, each element is a list object
-    //adj = new vector<int>[v];
+    this->vNum = v;     // no need to use this pointer here, alternative: vNum = v;
 }
 
 
 void Graph::AddEdge(int v, int w)
 {
-    adj[v].push_back(w);    // add w to v's adjacency list
+    vertexNeighborsMap[v].push_back(w);
 }
 
 
-void Graph::DFS_helper(int v, bool visited[])
+void Graph::DFS_helper(int v, unordered_map<int, bool> *nodeVisitedMapPointer)
 {
-    // Mark current node as visited
-    visited[v] = true;
+    (*nodeVisitedMapPointer)[v] = true;
     cout << v << " ";
-
-    // Recursion for all vertexes adjacent to node v
-    list<int>::iterator i;
-    for(i = adj[v].begin(); i != adj[v].end(); i++)
+    vector<int> vNeighbors = vertexNeighborsMap[v];
+    for(unsigned i = 0; i < vNeighbors.size(); i++)
     {
-        if(!visited[*i])
-            DFS_helper(*i, visited);
+        if(!(*nodeVisitedMapPointer)[vNeighbors[i]])
+            DFS_helper(vNeighbors[i], nodeVisitedMapPointer);
     }
 }
 
@@ -34,12 +29,15 @@ void Graph::DFS_helper(int v, bool visited[])
 void Graph::DFS(int v)
 {
     // Mark all nodes as not visited
-    bool *visited = new bool[v];
-    for(int i = 0; i < v; i++)
-        visited[i] = false;
+    unordered_map<int, bool> *nodeVisitedMapPointer;
+    nodeVisitedMapPointer = new unordered_map<int, bool>({{v, false}, {v, false}});
+    unordered_map<int, vector<int>>::iterator i;
+    for(i = vertexNeighborsMap.begin(); i != vertexNeighborsMap.end(); i++)
+        (*nodeVisitedMapPointer)[i->first] = false;
 
     // Call DFS_helper to print all node in DFS sense
-    DFS_helper(v, visited);
+    DFS_helper(v, nodeVisitedMapPointer);
+    delete nodeVisitedMapPointer;
 }
 
 

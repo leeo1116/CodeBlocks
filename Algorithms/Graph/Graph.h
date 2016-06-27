@@ -10,6 +10,7 @@ Reference 3 - http://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/
 #include <iostream>
 #include <list>
 #include <vector>
+#include <unordered_map>
 
 using namespace std;
 
@@ -18,14 +19,13 @@ class Graph
 {
     private:
         int vNum;           // number of vertex
-        list<int> *adj;     // pointer to a list
-        // vector<int> *adj;   // pointer to a list
-        void DFS_helper(int v, bool visited[]);     // a function used by DFS
+        unordered_map<int, vector<int>> vertexNeighborsMap;
+        void DFS_helper(int v, unordered_map<int, bool> *nodeVisitedMapPointer);     // a function used by DFS
 
     public:
-        Graph(int v);       // constructor
-        void AddEdge(int v, int w);                 // function to add edge to graph
-        void DFS(int v);    // DFS traversal of the vertex reachable from v
+        Graph(int v);                   // constructor
+        void AddEdge(int v, int w);     // function to add edge to graph
+        void DFS(int v);                // DFS traversal of the vertex reachable from v
 };
 
 
