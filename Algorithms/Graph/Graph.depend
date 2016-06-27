@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1467007124 source:f:\github\codeblocks\algorithms\graph\main.cpp
+	<iostream>
+	"Graph.h"
+
+1467006502 f:\github\codeblocks\algorithms\graph\graph.h
+	<iostream>
+	<list>
+	<vector>
+
