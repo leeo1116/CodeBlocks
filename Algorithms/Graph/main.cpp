@@ -16,8 +16,12 @@ int main(int argc, char **argv)
     g.AddEdge(9, 6);
     g.AddEdge(10, 5);
 
-    cout << "DFS Traversal (starting from vertex 2)" << endl;
+    cout << "DFS Traversal (starting from vertex 3)" << endl;
     g.DFS(3);
+    cout << "" << endl;
+
+    cout << "BFS Traversal (starting from vertex 3)" << endl;
+    g.BFS(3);
 
     return 0;
 }

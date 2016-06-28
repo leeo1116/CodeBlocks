@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1467057562 source:f:\github\codeblocks\algorithms\graph\main.cpp
+1467083698 source:f:\github\codeblocks\algorithms\graph\main.cpp
 	<iostream>
 	"Graph.h"
 
-1467058078 f:\github\codeblocks\algorithms\graph\graph.h
+1467087222 f:\github\codeblocks\algorithms\graph\graph.h
 	<iostream>
-	<list>
+	<queue>
 	<vector>
 	<unordered_map>
 
-1467057398 source:f:\github\codeblocks\algorithms\graph\graph.cpp
+1467084478 source:f:\github\codeblocks\algorithms\graph\graph.cpp
 	"Graph.h"
 
