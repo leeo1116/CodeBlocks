@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1467262197 source:f:\github\codeblocks\algorithms\leetcode\207_course_schedule.cpp
+	"Leetcode.h"
+
+1467261823 f:\github\codeblocks\algorithms\leetcode\leetcode.h
+	<unordered_map>
+	<vector>
+	<utility>
+	<unordered_set>
+
+1467260063 source:f:\github\codeblocks\algorithms\leetcode\main.cpp
+	<iostream>
+	"Leetcode.h"
+

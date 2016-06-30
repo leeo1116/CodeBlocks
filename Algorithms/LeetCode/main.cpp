@@ -1,17 +1,24 @@
 #include <iostream>
+#include "Leetcode.h"
+
 
 using namespace std;
 int findMedian_logn(int vec1[], int n1, int vec2[], int n2);
 
-int main()
+int main(int argc, char **args)
 {
-    int vec1[] = {3, 8};
-    int vec2[] = {4, 5};
-    int n1 = sizeof(vec1)/sizeof(1);
-    int n2 = sizeof(vec1)/sizeof(1);
-    int n3;
-    n3 = findMedian_logn(vec1, n1, vec2, n2);
-    cout << "Median: " << n3 << endl;
+    int courses = 2;
+    pair<int, int> p = make_pair(1, 0);
+    vector<pair<int, int>> pre = {p};
+    Solution s;
+    cout << s.CanFinishBFS(courses, pre) << " " << endl;
+//    int vec1[] = {3, 8};
+//    int vec2[] = {4, 5};
+//    int n1 = sizeof(vec1)/sizeof(1);
+//    int n2 = sizeof(vec1)/sizeof(1);
+//    int n3;
+//     n3 = findMedian_logn(vec1, n1, vec2, n2);
+//    cout << "Median: " << n3 << endl;
     return 0;
 }
 
