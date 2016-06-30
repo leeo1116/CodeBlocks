@@ -8,10 +8,12 @@ int findMedian_logn(int vec1[], int n1, int vec2[], int n2);
 int main(int argc, char **args)
 {
     int courses = 2;
-    pair<int, int> p = make_pair(1, 0);
-    vector<pair<int, int>> pre = {p};
+    pair<int, int> p1 = make_pair(1, 0);
+    pair<int, int> p2 = make_pair(0, 1);
+    vector<pair<int, int>> pre = {p1, p2};
     Solution s;
     cout << s.CanFinishBFS(courses, pre) << " " << endl;
+    cout << s.CanFinishDFS(courses, pre) << " " << endl;
 //    int vec1[] = {3, 8};
 //    int vec2[] = {4, 5};
 //    int n1 = sizeof(vec1)/sizeof(1);
