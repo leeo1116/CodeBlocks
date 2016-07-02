@@ -6,6 +6,7 @@
 #include <utility>
 #include <unordered_set>
 #include <algorithm>
+#include <map>
 
 using namespace std;
 
@@ -15,6 +16,7 @@ public:
     bool CanFinishBFS(int numCourses, vector<pair<int, int>>& prerequisites);
     bool CanFinishDFS(int numCourses, vector<pair<int, int>>& prerequisites);
     vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites);
+    bool ContainsDuplicatesIII(vector<int>& nums, int k, int t);
 
 private:
     bool HasCycleDFS(unordered_map<int, unordered_set<int>> &graph, int startVertex, vector<bool> &visited, vector<bool> &onPath);
