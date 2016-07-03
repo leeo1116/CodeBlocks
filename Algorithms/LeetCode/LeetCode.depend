@@ -2,18 +2,29 @@
 1467311785 source:f:\github\codeblocks\algorithms\leetcode\207_course_schedule.cpp
 	"Leetcode.h"
 
-1467436350 f:\github\codeblocks\algorithms\leetcode\leetcode.h
+1467500513 f:\github\codeblocks\algorithms\leetcode\leetcode.h
 	<unordered_map>
 	<vector>
 	<utility>
 	<unordered_set>
 	<algorithm>
 	<map>
+	<string>
+	<sstream>
 
 1467311642 source:f:\github\codeblocks\algorithms\leetcode\main.cpp
 	<iostream>
 	"Leetcode.h"
 
 1467349430 source:f:\github\codeblocks\algorithms\leetcode\210_course_schedule_ii.cpp
+	"Leetcode.h"
+
+1467439234 source:f:\github\codeblocks\algorithms\leetcode\220_contains_duplicates.cpp
+	"Leetcode.h"
+
+1467492846 source:f:\github\codeblocks\algorithms\leetcode\179_largest_number.cpp
+	"Leetcode.h"
+
+1467500497 source:f:\github\codeblocks\algorithms\leetcode\127_word_ladder.cpp
 	"Leetcode.h"
 

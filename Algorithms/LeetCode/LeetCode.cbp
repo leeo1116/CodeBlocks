@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="127_word_ladder.cpp" />
+		<Unit filename="179_largest_number.cpp" />
 		<Unit filename="207_course_schedule.cpp" />
 		<Unit filename="210_course_schedule_II.cpp" />
 		<Unit filename="220_contains_duplicates.cpp" />
