@@ -32,11 +32,26 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="018_4sum.cpp" />
+		<Unit filename="052_N_queens_II.cpp" />
 		<Unit filename="127_word_ladder.cpp" />
+		<Unit filename="133_clone_graph.cpp" />
 		<Unit filename="179_largest_number.cpp" />
+		<Unit filename="187_repeated_DNA_sequence.cpp" />
 		<Unit filename="207_course_schedule.cpp" />
 		<Unit filename="210_course_schedule_II.cpp" />
+		<Unit filename="211_add_and_search_word_data_structure_design.cpp" />
 		<Unit filename="220_contains_duplicates.cpp" />
+		<Unit filename="273_integer_to_english_words.cpp" />
+		<Unit filename="287_find_the_duplicate_number.cpp" />
+		<Unit filename="287_find_the_duplicate_number.jpg" />
+		<Unit filename="304_range_sum_query_immutable.cpp" />
+		<Unit filename="306_additive_number.cpp" />
+		<Unit filename="310_minimum_height_trees.cpp" />
+		<Unit filename="312_burst_ballons.cpp" />
+		<Unit filename="365_water_and_jug_problem.cpp" />
+		<Unit filename="367_valid_perfect_square.cpp" />
+		<Unit filename="368_largest_divisible_subset.cpp" />
 		<Unit filename="Leetcode.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

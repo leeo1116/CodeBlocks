@@ -1,14 +1,18 @@
 #ifndef LEETCODE_H_INCLUDED
 #define LEETCODE_H_INCLUDED
 
+#include <algorithm>
+#include <iostream>
 #include <unordered_map>
 #include <vector>
 #include <utility>
 #include <unordered_set>
-#include <algorithm>
 #include <map>
 #include <string>
 #include <sstream>
+#include <cstring>
+#include <queue>
+
 
 using namespace std;
 
@@ -21,12 +25,83 @@ public:
     bool ContainsDuplicatesIII(vector<int>& nums, int k, int t);
     string LargestNumber(vector<int> &nums);
     int LadderLength(string beginWord, string endWord, unordered_set<string>& wordList);
+    bool CanMeasureWater(int x, int y, int z);
+    vector<vector<int>> FourSum(vector<int> &nums, int target);
+    bool IsAdditiveNumber(string num);
+    static string Add(string s1, string s2);
+    vector<string> FindRepeatedDNA_Sequences(string s);
+    bool IsPerfectSquare(int num);
+    vector<int> FindMinHeightTree(int n, vector<pair<int, int>> &edges);
+    vector<int> LargestDivisibleSubset(vector<int> &nums);
+    int TotalN_Queens(int n);
+    int FindDuplicate(vector<int> &nums);
+    int MaxCoins(vector<int> &nums);
+    string NumToWords(int num);
+    string IntToStr(int n, const char * const below20[], const char * const below100[]);
 
 private:
     bool HasCycleDFS(unordered_map<int, unordered_set<int>> &graph, int startVertex, vector<bool> &visited, vector<bool> &onPath);
     bool HasCycleDFS_II(unordered_map<int, unordered_set<int>> &graph, int startVertex, vector<bool> &visited, vector<bool> &onPath, vector<int> &courseOrder);
     string IntToString(int i);
     void AddNextWords(string beginWord, unordered_set<string> &wordsList, queue<string> &toVisit);
+    int GCD(int a, int b);
+    bool Check(string num1, string num2, string num);
+    int Str2Int(string s);
+    void N_QueensDFS(unsigned i, int &cnt, vector<bool> &col, vector<bool> &diag, vector<bool> &offDiag);
+
 };
+
+
+class TrieNode{
+public:
+    bool isKey;     // is complete word from root to current node
+    TrieNode *children[26];
+
+    TrieNode(): isKey(false){
+        memset(children, 0, sizeof(TrieNode *)*26);
+    }
+
+};
+
+
+// 211. add and search word
+class WordDictionary{
+private:
+    TrieNode *root;
+    bool Query(const char *word, TrieNode *root);
+
+public:
+    WordDictionary(){
+        root = new TrieNode();
+    }
+    void AddWord(string word);
+    bool Search(string word);
+};
+
+
+class NumMatrix {
+private:
+    int row, col;
+    vector<vector<int>> sums;
+
+public:
+    NumMatrix(vector<vector<int>> &matrix);
+    int SumRegion(int row1, int col1, int row2, int col2);
+};
+
+
+
+struct UndirectedGraphNode {
+private:
+    int label;
+    vector<UndirectedGraphNode *> neighbors;
+    unordered_map<UndirectedGraphNode *, UndirectedGraphNode *> graphMap;
+public:
+    UndirectedGraphNode(int x) : label(x) {};
+    UndirectedGraphNode *CloneGraphBFS(UndirectedGraphNode *startNode);
+    UndirectedGraphNode *CloneGraphDFS(UndirectedGraphNode *startNode);
+};
+
+
 
 #endif // LEETCODE_H_INCLUDED

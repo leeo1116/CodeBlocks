@@ -2,17 +2,20 @@
 1467311785 source:f:\github\codeblocks\algorithms\leetcode\207_course_schedule.cpp
 	"Leetcode.h"
 
-1467500513 f:\github\codeblocks\algorithms\leetcode\leetcode.h
+1468027397 f:\github\codeblocks\algorithms\leetcode\leetcode.h
+	<algorithm>
+	<iostream>
 	<unordered_map>
 	<vector>
 	<utility>
 	<unordered_set>
-	<algorithm>
 	<map>
 	<string>
 	<sstream>
+	<cstring>
+	<queue>
 
-1467311642 source:f:\github\codeblocks\algorithms\leetcode\main.cpp
+1468000701 source:f:\github\codeblocks\algorithms\leetcode\main.cpp
 	<iostream>
 	"Leetcode.h"
 
@@ -25,6 +28,45 @@
 1467492846 source:f:\github\codeblocks\algorithms\leetcode\179_largest_number.cpp
 	"Leetcode.h"
 
-1467500497 source:f:\github\codeblocks\algorithms\leetcode\127_word_ladder.cpp
+1467503544 source:f:\github\codeblocks\algorithms\leetcode\127_word_ladder.cpp
+	"Leetcode.h"
+
+1467602547 source:f:\github\codeblocks\algorithms\leetcode\211_add_and_search_word_data_structure_design.cpp
+	"Leetcode.h"
+
+1467608359 source:f:\github\codeblocks\algorithms\leetcode\304_range_sum_query_immutable.cpp
+	"Leetcode.h"
+
+1467606655 source:f:\github\codeblocks\algorithms\leetcode\365_water_and_jug_problem.cpp
+	"Leetcode.h"
+
+1467660256 source:f:\github\codeblocks\algorithms\leetcode\018_4sum.cpp
+	"Leetcode.h"
+
+1467667896 source:f:\github\codeblocks\algorithms\leetcode\133_clone_graph.cpp
+	"Leetcode.h"
+
+1467781109 source:f:\github\codeblocks\algorithms\leetcode\306_additive_number.cpp
+	"Leetcode.h"
+
+1467954051 source:f:\github\codeblocks\algorithms\leetcode\187_repeated_dna_sequence.cpp
+	"Leetcode.h"
+
+1467835834 source:f:\github\codeblocks\algorithms\leetcode\367_valid_perfect_square.cpp
+	"Leetcode.h"
+
+1467932193 source:f:\github\codeblocks\algorithms\leetcode\310_minimum_height_trees.cpp
+	"Leetcode.h"
+
+1467933138 source:f:\github\codeblocks\algorithms\leetcode\368_largest_divisible_subset.cpp
+	"Leetcode.h"
+
+1467951353 source:f:\github\codeblocks\algorithms\leetcode\052_n_queens_ii.cpp
+	"Leetcode.h"
+
+1467953782 source:f:\github\codeblocks\algorithms\leetcode\287_find_the_duplicate_number.cpp
+	"Leetcode.h"
+
+1468000657 source:f:\github\codeblocks\algorithms\leetcode\312_burst_ballons.cpp
 	"Leetcode.h"
 

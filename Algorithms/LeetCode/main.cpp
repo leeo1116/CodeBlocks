@@ -4,6 +4,7 @@
 
 using namespace std;
 int findMedian_logn(int vec1[], int n1, int vec2[], int n2);
+int maxCoinsDP(vector<int> &iNums);
 
 int main(int argc, char **args)
 {
@@ -14,6 +15,20 @@ int main(int argc, char **args)
     Solution s;
     cout << s.CanFinishBFS(courses, pre) << " " << endl;
     cout << s.CanFinishDFS(courses, pre) << " " << endl;
+    WordDictionary wd;
+    // wd.AddWord("a");
+    cout << wd.Search("a") << endl;
+
+    // cout << Solution::Add("109", "37") << endl;
+    cout << s.IsAdditiveNumber("112358") << endl;
+    vector<string> repeatDNA = s.FindRepeatedDNA_Sequences("AGT");
+    for(auto seq : repeatDNA)
+        cout << seq << " ";
+    vector<int> nums = {4, 1, 3, 2, 3, 5, 3};
+    cout << s.FindDuplicate(nums) << endl;
+    vector<int> nums2 = {7,9,8,0,7,1,3,5};
+    cout << s.MaxCoins(nums2) << endl;
+    cout << maxCoinsDP(nums2) << endl;
 //    int vec1[] = {3, 8};
 //    int vec2[] = {4, 5};
 //    int n1 = sizeof(vec1)/sizeof(1);
