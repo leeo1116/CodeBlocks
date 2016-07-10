@@ -2,16 +2,18 @@
 #define LEETCODE_H_INCLUDED
 
 #include <algorithm>
+#include <cctype>
+#include <cstring>
 #include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <utility>
-#include <unordered_set>
 #include <map>
+#include <queue>
+#include <stack>
 #include <string>
 #include <sstream>
-#include <cstring>
-#include <queue>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 
 using namespace std;
@@ -38,6 +40,14 @@ public:
     int MaxCoins(vector<int> &nums);
     string NumToWords(int num);
     string IntToStr(int n, const char * const below20[], const char * const below100[]);
+    int Calculate(string s);
+    int SuperPow(int a, vector<int> &b);
+    int CountDigitOne(int n);
+    int FindMinII(vector<int> &nums);
+    int LongestConsecutive(vector<int> &nums);
+    vector<vector<string>> FindLadders(string beginWord, string endWord, unordered_set<string> &wordList);
+    int DistinctNum(string s, string t);
+    bool IsScramble(string s1, string s2);
 
 private:
     bool HasCycleDFS(unordered_map<int, unordered_set<int>> &graph, int startVertex, vector<bool> &visited, vector<bool> &onPath);
@@ -48,6 +58,12 @@ private:
     bool Check(string num1, string num2, string num);
     int Str2Int(string s);
     void N_QueensDFS(unsigned i, int &cnt, vector<bool> &col, vector<bool> &diag, vector<bool> &offDiag);
+    int PowMod(int a, int k, const int base);
+    bool SearchLadders(unordered_set<string> &startWords, unordered_set<string> &endWords, unordered_set<string> &wordList,
+                       unordered_map<string, vector<string>> &children, bool flip);
+    void GenLadders(string &startWord, string &endWord, unordered_map<string, vector<string>> &children,
+                    vector<string> &ladder, vector<vector<string>> &ladders);
+
 
 };
 

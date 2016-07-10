@@ -2,18 +2,20 @@
 1467311785 source:f:\github\codeblocks\algorithms\leetcode\207_course_schedule.cpp
 	"Leetcode.h"
 
-1468027397 f:\github\codeblocks\algorithms\leetcode\leetcode.h
+1468120253 f:\github\codeblocks\algorithms\leetcode\leetcode.h
 	<algorithm>
+	<cctype>
+	<cstring>
 	<iostream>
-	<unordered_map>
-	<vector>
-	<utility>
-	<unordered_set>
 	<map>
+	<queue>
+	<stack>
 	<string>
 	<sstream>
-	<cstring>
-	<queue>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<vector>
 
 1468000701 source:f:\github\codeblocks\algorithms\leetcode\main.cpp
 	<iostream>
@@ -67,6 +69,30 @@
 1467953782 source:f:\github\codeblocks\algorithms\leetcode\287_find_the_duplicate_number.cpp
 	"Leetcode.h"
 
-1468000657 source:f:\github\codeblocks\algorithms\leetcode\312_burst_ballons.cpp
+1468024840 source:f:\github\codeblocks\algorithms\leetcode\312_burst_ballons.cpp
+	"Leetcode.h"
+
+1468027583 source:f:\github\codeblocks\algorithms\leetcode\273_integer_to_english_words.cpp
+	"Leetcode.h"
+
+1468031424 source:f:\github\codeblocks\algorithms\leetcode\224_basic_calculator.cpp
+	"Leetcode.h"
+
+1468035642 source:f:\github\codeblocks\algorithms\leetcode\372_super_pow.cpp
+	"Leetcode.h"
+
+1468094900 source:f:\github\codeblocks\algorithms\leetcode\154_find_minimum_in_rotated_sorted_array_ii.cpp
+	"Leetcode.h"
+
+1468039305 source:f:\github\codeblocks\algorithms\leetcode\233_number_of_digit_one.cpp
+	"Leetcode.h"
+
+1468109125 source:f:\github\codeblocks\algorithms\leetcode\126_word_ladder_ii.cpp
+	"Leetcode.h"
+
+1468120189 source:f:\github\codeblocks\algorithms\leetcode\115_distinct_subsequences.cpp
+	"Leetcode.h"
+
+1468120686 source:f:\github\codeblocks\algorithms\leetcode\087_scramble_string.cpp
 	"Leetcode.h"
 

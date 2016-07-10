@@ -1,0 +1,25 @@
+#include "Leetcode.h"
+
+
+bool Solution::IsScramble(string s1, string s2){
+    if(s1 == s2)
+        return true;
+
+    int len = s1.size(), cnt[26] = {0};
+    for(int i = 0; i < len; i++){
+        cnt[s1[i]-'a']++;
+        cnt[s2[i]-'a']--;
+    }
+    for(int i = 0; i < 26; i++){
+        if(cnt[i] != 0)
+            return false;
+    }
+
+    for(int i = 1; i < len; i++){
+        if(IsScramble(s1.substr(0, i), s2.substr(0, i)) && IsScramble(s1.substr(i), s2.substr(i)))
+            return true;
+        if(IsScramble(s1.substr(0, i), s2.substr(len-i)) && IsScramble(s1.substr(i), s2.substr(0, len-i)))
+            return true;
+    }
+    return false;
+}

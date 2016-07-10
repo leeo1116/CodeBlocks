@@ -34,6 +34,9 @@
 		</Compiler>
 		<Unit filename="018_4sum.cpp" />
 		<Unit filename="052_N_queens_II.cpp" />
+		<Unit filename="087_scramble_string.cpp" />
+		<Unit filename="115_distinct_subsequences.cpp" />
+		<Unit filename="126_word_ladder_II.cpp" />
 		<Unit filename="127_word_ladder.cpp" />
 		<Unit filename="133_clone_graph.cpp" />
 		<Unit filename="179_largest_number.cpp" />
