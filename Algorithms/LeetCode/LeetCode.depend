@@ -2,13 +2,16 @@
 1467311785 source:f:\github\codeblocks\algorithms\leetcode\207_course_schedule.cpp
 	"Leetcode.h"
 
-1468120253 f:\github\codeblocks\algorithms\leetcode\leetcode.h
+1468466332 f:\github\codeblocks\algorithms\leetcode\leetcode.h
 	<algorithm>
 	<cctype>
+	<climits>
 	<cstring>
+	<deque>
 	<iostream>
 	<map>
 	<queue>
+	<set>
 	<stack>
 	<string>
 	<sstream>
@@ -94,5 +97,26 @@
 	"Leetcode.h"
 
 1468120686 source:f:\github\codeblocks\algorithms\leetcode\087_scramble_string.cpp
+	"Leetcode.h"
+
+1468096415 source:f:\github\codeblocks\algorithms\leetcode\128_longest_consecutive_sequence.cpp
+	"Leetcode.h"
+
+1468201602 source:f:\github\codeblocks\algorithms\leetcode\352_data_stream_as_disjoint_intervals.cpp
+	"Leetcode.h"
+
+1468206122 source:f:\github\codeblocks\algorithms\leetcode\117_populating_next_right_pointers_in_each_node_ii.cpp
+	"Leetcode.h"
+
+1468450238 source:f:\github\codeblocks\algorithms\leetcode\239_sliding_window_maximum.cpp
+	"Leetcode.h"
+
+1468452867 source:f:\github\codeblocks\algorithms\leetcode\354_russian_doll_envolopes.cpp
+	"Leetcode.h"
+
+1468450127 source:f:\github\codeblocks\algorithms\leetcode\363_max_sum_of_rectangle_no_larger_than_k.cpp
+	"Leetcode.h"
+
+1468460367 source:f:\github\codeblocks\algorithms\leetcode\164_maximum_gap.cpp
 	"Leetcode.h"
 

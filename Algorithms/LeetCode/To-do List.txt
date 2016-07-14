@@ -1,0 +1,7 @@
+1. KMP
+
+2. max sum of sub-sequence
+http://blog.csdn.net/sgbfblog/article/details/8032464
+
+3. Morris Traversal, indexed binary tree
+http://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html

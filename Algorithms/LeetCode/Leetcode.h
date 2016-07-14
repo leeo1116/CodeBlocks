@@ -3,10 +3,13 @@
 
 #include <algorithm>
 #include <cctype>
+#include <climits>
 #include <cstring>
+#include <deque>
 #include <iostream>
 #include <map>
 #include <queue>
+#include <set>
 #include <stack>
 #include <string>
 #include <sstream>
@@ -20,6 +23,37 @@ using namespace std;
 
 
 class Solution {
+private:
+    struct TreeLinkNode{
+        int val;
+        TreeLinkNode *left, *right, *next;
+        TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL){};
+    };
+    struct TreeNode{
+        int val;
+        TreeNode *left;
+        TreeNode *right;
+        TreeNode(int x) : val(x), left(NULL), right(NULL){}
+    };
+    TreeNode *first = NULL, *second = NULL, *prev = new TreeNode(INT_MIN);
+    bool HasCycleDFS(unordered_map<int, unordered_set<int>> &graph, int startVertex, vector<bool> &visited, vector<bool> &onPath);
+    bool HasCycleDFS_II(unordered_map<int, unordered_set<int>> &graph, int startVertex, vector<bool> &visited, vector<bool> &onPath, vector<int> &courseOrder);
+    string IntToString(int i);
+    void AddNextWords(string beginWord, unordered_set<string> &wordsList, queue<string> &toVisit);
+    int GCD(int a, int b);
+    bool Check(string num1, string num2, string num);
+    int Str2Int(string s);
+    void N_QueensDFS(unsigned i, int &cnt, vector<bool> &col, vector<bool> &diag, vector<bool> &offDiag);
+    int PowMod(int a, int k, const int base);
+    bool SearchLadders(unordered_set<string> &startWords, unordered_set<string> &endWords, unordered_set<string> &wordList,
+                       unordered_map<string, vector<string>> &children, bool flip);
+    void GenLadders(string &startWord, string &endWord, unordered_map<string, vector<string>> &children,
+                    vector<string> &ladder, vector<vector<string>> &ladders);
+    static bool CompareFirst(const pair<int, int> &i, const pair<int, int> &j);
+    void InorderTraversal(TreeNode *root);
+    void AddOperatorsDFS(vector<string> &exps, const string &num, const int target, string cur,
+                         int pos, const long cv, const long pv, const char op);
+
 public:
     bool CanFinishBFS(int numCourses, vector<pair<int, int>>& prerequisites);
     bool CanFinishDFS(int numCourses, vector<pair<int, int>>& prerequisites);
@@ -48,22 +82,14 @@ public:
     vector<vector<string>> FindLadders(string beginWord, string endWord, unordered_set<string> &wordList);
     int DistinctNum(string s, string t);
     bool IsScramble(string s1, string s2);
-
-private:
-    bool HasCycleDFS(unordered_map<int, unordered_set<int>> &graph, int startVertex, vector<bool> &visited, vector<bool> &onPath);
-    bool HasCycleDFS_II(unordered_map<int, unordered_set<int>> &graph, int startVertex, vector<bool> &visited, vector<bool> &onPath, vector<int> &courseOrder);
-    string IntToString(int i);
-    void AddNextWords(string beginWord, unordered_set<string> &wordsList, queue<string> &toVisit);
-    int GCD(int a, int b);
-    bool Check(string num1, string num2, string num);
-    int Str2Int(string s);
-    void N_QueensDFS(unsigned i, int &cnt, vector<bool> &col, vector<bool> &diag, vector<bool> &offDiag);
-    int PowMod(int a, int k, const int base);
-    bool SearchLadders(unordered_set<string> &startWords, unordered_set<string> &endWords, unordered_set<string> &wordList,
-                       unordered_map<string, vector<string>> &children, bool flip);
-    void GenLadders(string &startWord, string &endWord, unordered_map<string, vector<string>> &children,
-                    vector<string> &ladder, vector<vector<string>> &ladders);
-
+    void Connect(TreeLinkNode *root);
+    vector<int> MaxSlideWindow(vector<int> &nums, int k);
+    int MaxSumSubmatrix(vector<vector<int>> &matrix, int k);
+    int MaxEnvelopes(vector<pair<int, int>> &envelopes);
+    int MaxGap(vector<int> &nums);
+    void RecoverTree(TreeNode *root);
+    vector<string> AddOperators(string num, int target);
+    int MaxProfit(int k, vector<int>& prices);
 
 };
 
@@ -117,6 +143,27 @@ public:
     UndirectedGraphNode *CloneGraphBFS(UndirectedGraphNode *startNode);
     UndirectedGraphNode *CloneGraphDFS(UndirectedGraphNode *startNode);
 };
+
+
+struct Interval{
+    int start;
+    int stop;
+    Interval() : start(0), stop(0) {}
+    Interval(int s, int e) : start(s), stop(e) {}
+};
+
+
+class SummaryRanges{
+public:
+    SummaryRanges(){};
+    void AddNum(int val);
+    vector<Interval> GetIntervals();
+
+private:
+    vector<Interval> intervalVec;
+
+};
+
 
 
 
