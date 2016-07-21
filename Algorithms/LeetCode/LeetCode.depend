@@ -2,7 +2,7 @@
 1467311785 source:f:\github\codeblocks\algorithms\leetcode\207_course_schedule.cpp
 	"Leetcode.h"
 
-1468466332 f:\github\codeblocks\algorithms\leetcode\leetcode.h
+1468949496 f:\github\codeblocks\algorithms\leetcode\leetcode.h
 	<algorithm>
 	<cctype>
 	<climits>
@@ -118,5 +118,21 @@
 	"Leetcode.h"
 
 1468460367 source:f:\github\codeblocks\algorithms\leetcode\164_maximum_gap.cpp
+	"Leetcode.h"
+
+1468466352 source:f:\github\codeblocks\algorithms\leetcode\099_recover_binary_search_tree.cpp
+	"Leetcode.h"
+
+1468946836 source:f:\github\codeblocks\algorithms\leetcode\097_interleaving_string.cpp
+	"Leetcode.h"
+
+1468946626 source:f:\github\codeblocks\algorithms\leetcode\188_best_time_to_buy_and_sell_stock_iv.cpp
+
+1468946724 source:f:\github\codeblocks\algorithms\leetcode\282_expression_add_operators.cpp
+
+1468950720 source:f:\github\codeblocks\algorithms\leetcode\132_palindrome_partitioning_ii.cpp
+	"Leetcode.h"
+
+1468950574 source:f:\github\codeblocks\algorithms\leetcode\295_find_median_from_data_stream.cpp
 	"Leetcode.h"
 

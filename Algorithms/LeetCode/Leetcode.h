@@ -88,8 +88,17 @@ public:
     int MaxEnvelopes(vector<pair<int, int>> &envelopes);
     int MaxGap(vector<int> &nums);
     void RecoverTree(TreeNode *root);
+    // 282. expression add operator
     vector<string> AddOperators(string num, int target);
+    // 188. best time to buy and sell stock IV
     int MaxProfit(int k, vector<int>& prices);
+    bool IsInterleave(string s1, string s2, string s3);
+    // 132. palindrome partitioning II
+    int MinCut(string s);
+    // 174. dungeon game
+    int CalculateMinimumHP(vector<vector<int>> &dungeon);
+    // 214. shortest palindrome
+    string ShortestPalindrome(string s);
 
 };
 
@@ -165,6 +174,15 @@ private:
 };
 
 
+// 295. find median from data stream
+class MedianFinder{
+private:
+    priority_queue<long> smallHeap, largeHeap;
+
+public:
+    void AddNum(int num);
+    double FindMedian();
+};
 
 
 #endif // LEETCODE_H_INCLUDED
