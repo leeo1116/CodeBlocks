@@ -53,6 +53,10 @@ private:
     void InorderTraversal(TreeNode *root);
     void AddOperatorsDFS(vector<string> &exps, const string &num, const int target, string cur,
                          int pos, const long cv, const long pv, const char op);
+    // 374. guess number higher or lower
+    int Guess(int num);
+    int GuessHelper(int num, int low, int high);
+
 
 public:
     bool CanFinishBFS(int numCourses, vector<pair<int, int>>& prerequisites);
@@ -99,7 +103,11 @@ public:
     int CalculateMinimumHP(vector<vector<int>> &dungeon);
     // 214. shortest palindrome
     string ShortestPalindrome(string s);
-
+    // 371. sum of two integers
+    int GetSum(int a, int b);
+    // 374. guess number higher or lower
+    int GuessNumber(int n);
+    int MaxWiggleLength(vector<int> &nums);
 };
 
 

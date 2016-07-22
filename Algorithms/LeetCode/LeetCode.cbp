@@ -73,7 +73,9 @@
 		<Unit filename="365_water_and_jug_problem.cpp" />
 		<Unit filename="367_valid_perfect_square.cpp" />
 		<Unit filename="368_largest_divisible_subset.cpp" />
+		<Unit filename="371_sum_of_two_integers.cpp" />
 		<Unit filename="372_super_pow.cpp" />
+		<Unit filename="374_guess_number_higher_or_lower.cpp" />
 		<Unit filename="Leetcode.h" />
 		<Unit filename="To-do List.txt" />
 		<Unit filename="main.cpp" />

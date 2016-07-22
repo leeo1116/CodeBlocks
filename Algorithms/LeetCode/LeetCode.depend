@@ -2,7 +2,7 @@
 1467311785 source:f:\github\codeblocks\algorithms\leetcode\207_course_schedule.cpp
 	"Leetcode.h"
 
-1468949496 f:\github\codeblocks\algorithms\leetcode\leetcode.h
+1469076691 f:\github\codeblocks\algorithms\leetcode\leetcode.h
 	<algorithm>
 	<cctype>
 	<climits>
@@ -134,5 +134,11 @@
 	"Leetcode.h"
 
 1468950574 source:f:\github\codeblocks\algorithms\leetcode\295_find_median_from_data_stream.cpp
+	"Leetcode.h"
+
+1468965243 source:f:\github\codeblocks\algorithms\leetcode\174_dungeon_game.cpp
+	"Leetcode.h"
+
+1468968155 source:f:\github\codeblocks\algorithms\leetcode\214_shortest_palindrome.cpp
 	"Leetcode.h"
 
