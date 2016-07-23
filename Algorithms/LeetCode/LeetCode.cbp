@@ -76,6 +76,7 @@
 		<Unit filename="371_sum_of_two_integers.cpp" />
 		<Unit filename="372_super_pow.cpp" />
 		<Unit filename="374_guess_number_higher_or_lower.cpp" />
+		<Unit filename="376_wiggle_subsequence.cpp" />
 		<Unit filename="Leetcode.h" />
 		<Unit filename="To-do List.txt" />
 		<Unit filename="main.cpp" />

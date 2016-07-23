@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="013_strStr.cpp" />
+		<Unit filename="055_compare_strings.cpp" />
+		<Unit filename="158_two_strings_are_anagrams.cpp" />
+		<Unit filename="LintCode.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
