@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1469252072 source:f:\github\codeblocks\algorithms\lintcode\main.cpp
+	"LintCode.h"
+
+1469250506 f:\github\codeblocks\algorithms\lintcode\lintcode.h
+	<iostream>
+	<unordered_map>
+
+1469249139 source:f:\github\codeblocks\algorithms\lintcode\158_two_strings_are_anagrams.cpp
+	"LintCode.h"
+
+1469250431 source:f:\github\codeblocks\algorithms\lintcode\055_compare_strings.cpp
+	"LintCode.h"
+
+1469252253 source:f:\github\codeblocks\algorithms\lintcode\013_strstr.cpp
+	"LintCode.h"
+
