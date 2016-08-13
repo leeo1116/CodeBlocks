@@ -9,5 +9,8 @@ int main(int argc, char **argv)
     cout << s.CompareStrings("ABCD", "DEAC") << endl;
     const char *source = "aiangli", *target = "li";
     cout << s.StrStrNaive(source, target) << endl;
+    vector<string> s3 = {"ac","bac", "ca", "bdca", "cab"};
+    for (auto a : s.Anagrams(s3))
+        cout << a << ' ';
     return 0;
 }

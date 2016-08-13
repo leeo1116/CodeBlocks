@@ -3,11 +3,14 @@
 
 #include <iostream>
 #include <unordered_map>
+#include <vector>
 
 using namespace std;
 
 class Solution{
 private:
+    // 171. anagrams
+    string GetSortedStr(string &str);
 
 public:
     // 158. two strings are anagrams
@@ -18,6 +21,8 @@ public:
     // 013. strStr
     int StrStrNaive(const char *source, const char *target);
     int StrStrKMP(const char *source, const char *target);
+    // 171. anagrams
+    vector<string> Anagrams(vector<string> &strs);
 };
 
 #endif // LINTCODE_H_INCLUDED
